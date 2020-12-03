@@ -1,0 +1,31 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: cloud-payment-service
+  datasource:
+    # 当前数据源操作类型
+    type: com.alibaba.druid.pool.DruidDataSource
+    # mysql驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://62.234.92.101:33306/db2019?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+
+eureka:
+  client:
+    register-with-eureka: true #表示是否将自己的服务注册进eureka默认为true
+    fetch-registry: true      #表示是否从EurekaServer获取注册信息，默认为true
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka , http://eureka7001.com:7001/eureka #集群
+      #defaultZone: http://localhost:7001/eureka/      #单机
+  instance:
+    instance-id: payment8002
+    prefer-ip-address: true
+
+
+#  它一般对应我们的实体类所在的包，这个时候会自动取对应包中不包括包名的简单类名作为包括包名的别名。多个package之间可以用逗号或者分号等来进行分隔（value的值一定要是包的全）
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.jwq.springcloud.entities  #实体类对应的包，自己修改
