@@ -7,8 +7,8 @@ package controller;
 
 //简单单例模式
 public class Singleton {
-
-    private static Singleton instance = null;
+    //volatile禁止指令重排确保多线程下100%安全
+    private static volatile Singleton instance = null;
 
     private Singleton(){
 
