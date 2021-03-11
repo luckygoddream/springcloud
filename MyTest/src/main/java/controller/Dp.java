@@ -21,6 +21,8 @@ public class Dp {
             }
         }
         System.out.println(dp[0]);
+        Double d = 25/2d;
+        System.out.println(d);
         //System.out.println(chars.length);
     }
 }

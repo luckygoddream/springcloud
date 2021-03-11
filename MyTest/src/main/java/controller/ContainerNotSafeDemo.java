@@ -32,6 +32,8 @@ public class ContainerNotSafeDemo {
         Iterator<Integer> iterator = set.iterator();
         Object next = iterator.next();
         System.out.println(next);
+        System.out.println();
+        Integer i = 5;
 
 
 //        for (int i = 0; i < 30 ; i++) {
