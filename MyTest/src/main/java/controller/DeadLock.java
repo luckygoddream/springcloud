@@ -35,8 +35,9 @@ class lockA implements Runnable{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            System.out.println("尝试获取lockb");
             synchronized (DeadLock.lockb){
-                System.out.println("尝试获取lockb");
+                System.out.println("已经获取lockb");
 
             }
         }
@@ -56,8 +57,9 @@ class lockB implements Runnable{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            System.out.println("尝试获取locka");
             synchronized (DeadLock.locka){
-                System.out.println("尝试获取locka");
+                System.out.println("已经获取locka");
 
             }
         }
