@@ -32,7 +32,7 @@ public class ThreadTest {
            for (int i = 1; i <= 10 ; i++) {
                if (i % 2 == 0){
                    System.out.println(Thread.currentThread().getName()+":"+i);
-                   //threadA
+                   //释放threadA线程
                    LockSupport.unpark(threadA);
                    //锁定threadBB线程
                    LockSupport.park();

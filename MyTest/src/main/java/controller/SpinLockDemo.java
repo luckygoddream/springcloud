@@ -16,13 +16,15 @@ public class SpinLockDemo {
         Thread thread = Thread.currentThread();
         System.out.println(Thread.currentThread().getName()+"\t come in O(∩_∩)O哈哈~");
          while (!atomicReference.compareAndSet(null,thread)){
-             System.out.println(Thread.currentThread().getName());
+           //  System.out.println(Thread.currentThread().getName());
          }
     }
-
+    // 
     public void myUnLock(){
         Thread thread = Thread.currentThread();
-        atomicReference.compareAndSet(thread,null);
+        boolean b = atomicReference.compareAndSet(thread, null);
+
+        System.out.println(b);
         System.out.println(Thread.currentThread().getName()+"\t muUnLock()");
     }
     public static void main(String[] args) {
@@ -38,13 +40,12 @@ public class SpinLockDemo {
         },"first").start();
 
 
+
         try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-
 
         new Thread(()->{
             spinLockDemo.myLock();
