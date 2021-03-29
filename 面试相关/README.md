@@ -36,3 +36,6 @@
 ## 7.什么是内存泄露？什么是内存溢出？
 - 内存溢出是指程序在申请内存时，没有足够的内存可以使用，出现out of memory
 - 内存泄露是指程序在申请内存后，无法释放已经申请的内存，多次内存泄露会出现memory leak
+
+## 8.PING命令使用的是什么协议？
+- 使用的是ICMP协议，是“Internet Control Message Protocol”（Internet控制消息协议）的缩写，是 TCP/IP协议族 的一个子协议，用于在IP主机、 路由器 之间传递控制消息
