@@ -39,3 +39,11 @@
 
 ## 8.PING命令使用的是什么协议？
 - 使用的是ICMP协议，是“Internet Control Message Protocol”（Internet控制消息协议）的缩写，是 TCP/IP协议族 的一个子协议，用于在IP主机、 路由器 之间传递控制消息
+
+## 9.union和union all的区别
+- union是将连接的两个查询结果表连接起来并做去重处理；
+- union all是将连接的两个查询结果表连接起来；﻿
+- 效率：
+  - 对重复结果的处理：UNION在进行表链接后会筛选掉重复的记录，Union All不会去除重复记录。
+  - 对排序的处理：Union将会按照字段的顺序进行排序；UNION ALL只是简单的将两个结果合并后就返回。
+- 从效率上说，UNION ALL 要比UNION快很多，所以，如果可以确认合并的两个结果集中不包含重复数据且不需要排序时的话，那么就使用UNION ALL。
