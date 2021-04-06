@@ -29,5 +29,7 @@ public class Sqrt2 {
     public static void main(String[] args) {
         double mid = sqrt2();
         System.out.println(mid);
+        System.out.println(9999999+9999);
+
     }
 }
