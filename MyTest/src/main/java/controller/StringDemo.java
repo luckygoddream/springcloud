@@ -19,5 +19,6 @@ public class StringDemo {
         String s4 = s3.intern();
         System.out.println(s3 == s4);//false
 
+
     }
 }
