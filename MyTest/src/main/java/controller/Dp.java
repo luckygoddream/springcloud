@@ -1,5 +1,8 @@
 package controller;
 
+import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * @Author: jwq
  * @Date: 2021/3/4 9:44
@@ -24,5 +27,10 @@ public class Dp {
         Double d = 25/2d;
         System.out.println(d);
         //System.out.println(chars.length);
+        ConcurrentHashMap<Integer,String> concurrentHashMap = new ConcurrentHashMap();
+        concurrentHashMap.put(1, "黄黑");
+        String s = concurrentHashMap.get(1);
+        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+        objectObjectHashMap.put("2","test");
     }
 }
