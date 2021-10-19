@@ -1,5 +1,8 @@
 package controller;
 
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+
 /**
  * @Author: jwq
  * @Date: 2021/3/11 15:31
@@ -21,6 +24,12 @@ LinkedBlockingDeque：由链表结构组成的双向阻塞队列
 * */
 public class BlockingQueueDemo {
     public static void main(String[] args) {
-
+ //      Integer i =  ThreadLocalRandom.current().nextInt(199);
+ //      System.out.println(i);
+        for (int j = 1; j <= 10 ; j++) {
+            new Thread(()->{
+                System.out.println(Thread.currentThread().getName()+":"+ ThreadLocalRandom.current().nextInt(199));
+            },Thread.currentThread().getName()+j).start();
+        }
     }
 }

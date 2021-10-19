@@ -41,7 +41,7 @@
 
 
 ## 8.PING命令使用的是什么协议？
-- 使用的是ICMP协议，是“Internet Control Message Protocol”（Internet控制消息协议）的缩写，是 TCP/IP协议族 的一个子协议，用于在IP主机、 路由器 之间传递控制消息
+- 使用的是ICMP协议，是“Internet Control Message Protocol”（Internet控制消息协议）的缩写，是TCP/IP协议族的一个子协议，用于在IP主机、 路由器之间传递控制消息
 
 ## 9.union和union all的区别
 - union是将连接的两个查询结果表连接起来并做去重处理；
@@ -73,4 +73,4 @@
 - 3.14E-4表示3.14乘以10的负4次方
 - 3.14E+4表示3.14乘以10的4次方
 
-## 16
+## 16.
