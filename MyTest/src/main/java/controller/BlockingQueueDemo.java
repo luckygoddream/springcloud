@@ -1,5 +1,8 @@
 package controller;
 
+import lombok.Data;
+import lombok.Getter;
+
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -26,10 +29,33 @@ public class BlockingQueueDemo {
     public static void main(String[] args) {
  //      Integer i =  ThreadLocalRandom.current().nextInt(199);
  //      System.out.println(i);
-        for (int j = 1; j <= 10 ; j++) {
-            new Thread(()->{
-                System.out.println(Thread.currentThread().getName()+":"+ ThreadLocalRandom.current().nextInt(199));
-            },Thread.currentThread().getName()+j).start();
-        }
+//       for (int j = 1; j <= 10 ; j++) {
+//            new Thread(()->{
+//                System.out.println(Thread.currentThread().getName()+":"+ ThreadLocalRandom.current().nextInt(199));
+//            },Thread.currentThread().getName()+j).start();
+//        }
+        String s = "hhhhhhhhffffffff";
+        String x = s.replace("g","");
+
+        System.out.println(x);
+       // System.out.println(s);
+        Perpon perpon = new Perpon();
+        perpon.setAge("132");
+        perpon.setName("dfggh");
+        get(perpon);
+        //System.out.println(perpon.getAge());
+        System.out.println();
     }
+
+    public static  String get(Perpon perpon){
+        String age = perpon.getAge();
+        String s = age.replace("2","");
+        return s;
+    }
+
+}
+@Data
+class  Perpon{
+    private String name;
+    private String age;
 }
