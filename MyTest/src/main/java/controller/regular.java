@@ -20,11 +20,11 @@ public class regular {
         //String s = "/^\\w+(?:\\.\\w+){0,1}@[a-zA-Z0-9]{2,14}(?:\\.[a-z]{2,4}){1,2}$/";
        //String check = "^([a-z0-9A-Z]+[-|\\._]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z.]{2,}$";
         //Pattern pattern = Pattern.compile(check);
-        String mail = "adrian.smith1975icloud.uk.9";
-        //Matcher matcher = pattern.matcher(mail);
-        //boolean flag = matcher.matches();
-        boolean flag = mail.contains("@");
-        System.out.println(flag);
+//        String mail = "adrian.smith1975icloud.uk.9";
+//        //Matcher matcher = pattern.matcher(mail);
+//        //boolean flag = matcher.matches();
+//        boolean flag = mail.contains("@");
+//        System.out.println(flag);
 //        String s = "S1";
 //        char [] chars = s.toCharArray();
 //        System.out.println(chars[1]);
@@ -67,15 +67,26 @@ public class regular {
 //        list2.addAll(list);
 //        list.clear();
 //        System.out.println(list2);
-        List<String> list1 = new ArrayList<String>(Arrays.asList("a","b","c"));
-        List<Integer> list2 = new ArrayList<Integer>(Arrays.asList(1,2,3));
-
-        boolean f = list1.getClass() == list2.getClass();
-        System.out.println(f);
-        BigDecimal bigDecimal  = BigDecimal.ZERO;
-        System.out.println(bigDecimal);
+//        List<String> list1 = new ArrayList<String>(Arrays.asList("a","b","c"));
+//        List<Integer> list2 = new ArrayList<Integer>(Arrays.asList(1,2,3));
+//
+//        boolean f = list1.getClass() == list2.getClass();
+//        System.out.println(f);
+//        BigDecimal bigDecimal  = BigDecimal.ZERO;
+//        System.out.println(bigDecimal);
 //        LoadingCache<String,String> cache = CacheBuilder.newBuilder().concurrencyLevel(20).
+//            Map map = new HashMap();
+//            map.put("b","b");
+//        Object a = map.get("a");
+//        System.out.println(a.toString());
+        boolean flag = false;
+        for (int i = 0; i <10 ; i++) {
+            if (!flag){
+                System.out.println(i);
+                flag = true;
+            }
+        }
+        System.out.println(flag);
 
-
-}
+    }
     }
