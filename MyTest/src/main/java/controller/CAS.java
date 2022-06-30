@@ -21,7 +21,7 @@ public class CAS {
         boolean b1 = atomicInteger.compareAndSet(5, 1024);
         System.out.println(b + " "+ atomicInteger.get());
         System.out.println(b1+" "+atomicInteger.get());
-
+        String s = "111";
         //String string [] = {"1"};
        // string[0] = "1";
     }

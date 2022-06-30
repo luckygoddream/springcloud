@@ -62,7 +62,4 @@ public class PaymentController {
         return result != null ? new CommonResult(200,"查询数据成功,serverPort: "+serverPort,result) : new CommonResult(400,"查询数据失败,serverPort"+serverPort,null);
 
     }
-
-
-
 }
