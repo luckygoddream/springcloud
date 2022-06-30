@@ -79,4 +79,5 @@
 ## 17. redis的全称
 - redis的全程是Remote Dictionary Server即远程字典服务
 
-## 18.
+## 18.MySQL字符串与数字比较时如何转换？
+- MySQL在遇到字符串和数字比较的时候，会自动把字符串转为数字，然后再进行比较
