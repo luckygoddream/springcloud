@@ -1,5 +1,10 @@
 package controller;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -19,10 +24,24 @@ public class CAS {
         boolean b = atomicInteger.compareAndSet(5, 2021);
         //期望值与实际值不符，修改失败
         boolean b1 = atomicInteger.compareAndSet(5, 1024);
-        System.out.println(b + " "+ atomicInteger.get());
-        System.out.println(b1+" "+atomicInteger.get());
+        System.out.println(b + " " + atomicInteger.get());
+        System.out.println(b1 + " " + atomicInteger.get());
 
         //String string [] = {"1"};
-       // string[0] = "1";
+        // string[0] = "1";
+
+        UUID uuid = UUID.randomUUID();//生成唯一不重复订单号
+        String id = uuid.toString();
+        System.out.println(id);
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println("当前日期: " + now + " " + now.getDayOfWeek());
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String nowFormat = now.format(dateTimeFormatter);
+        System.out.println("格式化后的当前日期：" + nowFormat);
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
+        //df.format(new Date());
+        System.out.println(df.format(new Date()));// new Date()为获取当前系统时间
+        System.out.println(new Date());
     }
+
 }

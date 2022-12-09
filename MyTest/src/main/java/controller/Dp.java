@@ -1,5 +1,7 @@
 package controller;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -32,5 +34,7 @@ public class Dp {
         String s = concurrentHashMap.get(1);
         HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
         objectObjectHashMap.put("2","test");
+
+        Menu menu = new Menu();
     }
 }
