@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import javax.annotation.Resource;
 
 /**
- * @Author jwq
+ * @Author jwqnjj
  * @Date 2020/7/24 11:05
  */
 
