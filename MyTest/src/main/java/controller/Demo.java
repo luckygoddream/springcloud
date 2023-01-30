@@ -5,10 +5,7 @@ package controller;
 import org.apache.commons.lang3.time.DateUtils;
 
 import java.text.ParseException;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Demo {
@@ -39,5 +36,10 @@ public class Demo {
 
 
         sortedMap.entrySet().forEach(System.out::println);
+
+        String string = UUID.randomUUID().toString();
+        System.out.println(string);
+
+
     }
 }
