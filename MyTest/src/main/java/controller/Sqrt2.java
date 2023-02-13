@@ -41,7 +41,8 @@ public class Sqrt2 {
         String strCom = "I like java！";  //定义一个字符串
         boolean str = strCom.isEmpty();  //判断字符串是否为空
         System.out.println(str);
-        
+        double sqrt = Math.sqrt(2);
+        System.out.println(sqrt);
 
     }
 }
