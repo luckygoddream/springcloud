@@ -18,6 +18,7 @@
         <module>cloud-provider-payment8002</module>
         <module>MyTest</module>
         <module>springAOP</module>
+        <module>netty-demo</module>
 
     </modules>
 
