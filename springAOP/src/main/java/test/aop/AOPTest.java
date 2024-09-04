@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 public class AOPTest {
 
   @Resource //先根据名字 再根据类型 java自带的
-  @Autowired //根据类型注入 spring带的
+//  @Autowired //根据类型注入 spring带的
   private CalcService calcService;
 
     @Test
