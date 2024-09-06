@@ -27,6 +27,7 @@
             <artifactId>guava</artifactId>
             <version>31.0.1-jre</version>
         </dependency>
+<!--        对象内存打印-->
         <dependency>
             <groupId>org.openjdk.jol</groupId>
             <artifactId>jol-core</artifactId>

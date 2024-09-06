@@ -1,5 +1,7 @@
 package controller;
 
+import org.openjdk.jol.info.ClassLayout;
+
 import java.math.BigDecimal;
 
 /**
@@ -24,6 +26,11 @@ public class MyTest {
         System.out.println(c);
         System.out.println(d);
         System.out.println(e);
+
+        Object o = new Object();
+
+        // 打印对象的内存情况
+        System.out.println(ClassLayout.parseInstance(o).toPrintable());
 
     }
 }
