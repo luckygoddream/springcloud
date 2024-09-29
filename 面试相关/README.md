@@ -161,3 +161,9 @@
 - 当一个类初始化时，并不会初始化其实现的接口。
 - 初始化一个接口时，并不会初始化它的父接口。
 
+## 28 SpringBoot中有了属性文件为什么还要加一个bootstrap.yml文件?
+- 在单体的SpringBoot项目中其实我们是用不到bootstrap.yml文件的，bootstrap.yml文件的使用需要SpringCloud的支持，因为在微服务环境下我们]都是有配置中心的，来统一的管理系统的相关配置属性， 那么怎么去加教配置中心的内容呢?一个SpringBoot项目启动的时候默认只会加载对应的application.yml中的相关信息，这时bootstrap.yml的作用就体现出来了，会在SpringBoot正常启动前创建一个父容器来通过bootstrap.yml中的配置来加载配置中心的内容。
+
+## 29 锁的小知识
+- 线程阻塞方法wait()与线程唤醒方法notify()必须配合synchronized使用
+- Lock下的类线程阻塞方法await()与线程唤醒方法signal()

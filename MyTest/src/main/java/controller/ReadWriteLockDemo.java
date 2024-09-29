@@ -20,28 +20,29 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * 写-写：不能共存
  *
  */
-class MyCatch{//资源类
-    private volatile Map<String,Object> map = new HashMap<>();
+class MyCatch {//资源类
+    private volatile Map<String, Object> map = new HashMap<>();
     ReentrantReadWriteLock readWriteLock = new ReentrantReadWriteLock();//专门的读写锁
 
-    public void put(String key,Object value){
+    public void put(String key, Object value) {
         readWriteLock.writeLock().lock();
         try {
             System.out.println("正在写入");
-            map.put(key,value);
+            map.put(key, value);
             System.out.println("写入完成");
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             readWriteLock.writeLock().unlock();
         }
     }
+
     public Object get(String key) {
         Object o = null;
         readWriteLock.readLock().lock();
         try {
             System.out.println("正在读取");
-             o = map.get(key);
+            o = map.get(key);
             System.out.println("读取完成:" + o);
         } catch (Exception e) {
             e.printStackTrace();
@@ -56,18 +57,18 @@ class MyCatch{//资源类
 
 public class ReadWriteLockDemo {
     public static void main(String[] args) {
-    MyCatch myCatch = new MyCatch();
-        for (int i = 1; i <=5 ; i++) {
-            final  int t = i;
-            new Thread(()->{
-                myCatch.put(t+"",t+"");
+        MyCatch myCatch = new MyCatch();
+        for (int i = 1; i <= 5; i++) {
+            final int t = i;
+            new Thread(() -> {
+                myCatch.put(t + "", t + "");
             }).start();
         }
 
-        for (int i = 1; i <=5 ; i++) {
-            final  int t = i;
-            new Thread(()->{
-                myCatch.get(t+"");
+        for (int i = 1; i <= 5; i++) {
+            final int t = i;
+            new Thread(() -> {
+                myCatch.get(t + "");
             }).start();
         }
     }
